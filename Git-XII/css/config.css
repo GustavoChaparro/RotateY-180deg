@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+/*===== VARIABLES CSS Y SASS =====*/
+/*Varibles sass*/
+/*Variables css*/
+/*===== Colores =====*/
+:root {
+	--color1: rgb(219,144,.5);				/* Color Naranja*/
+	--color2: rgba(23, 180, 83, 0.877);		/* Color Verde*/
+	--color3: rgba(11,194,211, 0.623);		/* Color */
+	--color4: #fff;							/* Color Blanco*/
+	--color5: #000;							/* Color Negro*/
+	--color6: #BDBDBD;
+	--color7: crimson;
+	--color8: #12192C;
+	--color9: #F5A623;
+	--color10: #EDEDED;
+	--color11: #000;
+}
+main{
+	width: 100%;
+	max-width: 1150px; /*Tamaño de la caja interna - Main*/
+	margin: auto;	
+}
+.wave{
+	height: 100px;
+	width: 100%;
+	margin-left:;
+	margin-top: auto;/*Cuadra el tamaño de la caja quebrada*/
+}
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+/* *. all similar content styling codes                                   Diseñado por Gustavo Chaaprro .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                     Caracas, Creado 12 Ene 2021   .*.* */
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+section{
+    padding: 15px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: auto;
+}
+.briefcase, footer{
+    font-family: AvantGarde;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 250px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: var(--color1);
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+/* *. Menu Lateral - Sidebar menu                                         Diseñado por Gustavo Chaaprro .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                     Caracas, Creado 25 Ene 2021   .*.* */
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+
+/*===== Fuente y tipografia =====*/
+:root {
+  --body-font: 'Quicksand', sans-serif;
+  --small-font-size: 0.875rem;
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --small-font-size: 0.938rem;
+  }
+}
+/*===== z index =====*/
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+/*===== BASE =====*/
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  position: relative;
+  margin: 0;
+  padding: 1rem 0 0 5rem;
+  font-family: var(--body-font);
+  background-color: var(--color4);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+h1 {
+  margin: 0;
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/*=====  NAV =====*/
+.l-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 56px;
+  height: 100vh;
+  background-color: var(--color5);
+  padding: 1.25rem .5rem 2rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: var(--z-fixed);
+}
+.nav {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+.nav__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 .5rem;
+}
+.nav__logo-icon {
+  margin-right: 1.2rem;
+}
+.nav__logo-text {
+  color: var(--color10);
+  font-weight: 700;
+}
+.nav__toggle {
+  position: absolute;
+  top: 1.10rem;
+  right: -.6rem;
+  width: 18px;
+  height: 18px;
+  background-color: var(--color9);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  color: var(--color8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.nav__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+  color: var(--color10);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.nav__link:hover {
+  background-color: var(--color9);
+  color: var(--color8);
+}
+.nav__icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.nav__text {
+  font-weight: 700;
+}
+/*Show menu*/
+.show {
+  width: 168px;
+}
+/*Rotate toggle*/
+.rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+/*Active links menu*/
+.active {
+  background-color: var(--color9);
+  color: var(--color8);
+}
+/*Add padding body*/
+.expander {
+  padding: 1rem 0 0 12rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+/* *. Galeria section styling                                             Diseñado por Gustavo Chaaprro .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                     Caracas, Creado 12 Ene 2021   .*.* */
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+
+.briefcase {
+	padding:25px;
+	color:#fff;
+    background: #111;
+	padding:25px;
+}
+.briefcase .title::after{
+    content: "Efecto rotateY 180°";
+	background: #111;
+}
+.briefcase .title::before{
+    background: #fff;
+}
+.briefcase .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.maincontainer{
+	margin-bottom:15px;
+	position:relative;
+    height: 250px;
+    width: 320px;	
+}
+.thecard{
+	position:absolute;
+	width:100%;
+	height:100%;	
+	transform-style: preserve-3d;
+	transition: all 1.9s ease;	
+}
+.thecard:hover{
+	transform:rotateY(180deg);
+}
+.thefront{
+	position:absolute;
+	width:100%;
+	height:100%;		
+	backface-visibility: hidden;
+	color: #333;
+}
+.thefront img{
+	border-radius:5px;
+}
+.theback{
+	position:absolute;
+	width:100%;
+	height:100%;		
+	backface-visibility: hidden;				
+	background:var(--color10);
+	color: #333;
+	transform: rotateY(180deg);	
+	border-radius:5%;
+}
+.theback p{
+	position:center;
+	padding:5px;
+	font-family:AvantGarde;
+	text-align: center;
+	font-size:15px;	
+}
+.theback i{
+	position:center;
+	padding:15px;
+	font-family:AvantGarde;
+	text-align:center ;
+	font-size:15px;	
+}
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+/* *. footer section styling                                              Diseñado por Gustavo Chaaprro .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                     Caracas, Creado 12 Ene 2021   .*.* */
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+footer{
+    background: #111;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+	width:99%;
+}
+footer span a{
+    color: var(--color1);
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
